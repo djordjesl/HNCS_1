@@ -1,13 +1,18 @@
 #include "User.h"
 
 
-User::User(std::string username, std::string password) : username(username), password(password) {}
+User::User(std::string username, std::string password, std::string location) : username(username), password(password), location(location){}
 
 User::~User() {}
 
 std::string User::getPassword()
 {
 	return password;
+}
+
+std::string User::getLocation()
+{
+	return location;
 }
 
 std::string User::getUsername()

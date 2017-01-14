@@ -1,15 +1,18 @@
-#include"User.h"
 #include<iostream>
 #include<ctime>
 #include<fstream>
+#include"User.h"
+#include "EnteringPassToll.h"
 using namespace std;
+
 int main()
 {
+	EnteringPassToll ept;
+
 	string searchUsername;
 	string searchPassword;
 	string location;
 	char position;
-	char text[255];
 
 	cout << "Hello user!" << endl;
 	cout << "Username: ";
@@ -22,7 +25,7 @@ int main()
 	cout << "Entering pass toll (E) or Leaving pass tool (L): ";
 	cin >> position;
 
-	User user(searchUsername, searchPassword);
+	User user(searchUsername, searchPassword, location);
 	if (user.checkAuthorisation())
 	{
 		if (position == 'E')
@@ -31,39 +34,11 @@ int main()
 			cin >> position;
 			if (position == 'H')
 			{
-				ifstream help("Help.txt", ios::in);
-				if (help)
-					while (help)
-					{
-						help.getline(text, 255, '\n');
-						if (help) cout << text << endl;
-					}
-				else
-					cout << "Not such database!";
-				help.close();
+				ept.printHelp();
 			}
 			else if(position == 'G')
 			{
-				ofstream dat("Ticket.txt", ios::out);
-				if (!dat)
-					cout << "Error!";
-				else
-				{
-					dat << "___________Ticket of HNCS service______________" << endl << endl;
-					dat << "Location: " << location << endl;
-					dat << "Worker: " << user.getUsername() << endl << endl;
-					time_t now = time(0);
-					dat << "_______________Have a nice trip________________" << endl;
-					
-					// convert now to string form
-					char* dt = ctime(&now);
-
-					dat << "Date/Time: " << dt << endl;
-
-				}
-					
-				dat.close();
-
+				ept.printTicket(user);
 			}
 		}
 	}
