@@ -1,4 +1,3 @@
-#include"IzadavanjeRacuna.h"
 #include"User.h"
 #include<iostream>
 #include<ctime>
@@ -6,36 +5,69 @@
 using namespace std;
 int main()
 {
-	string searchUsername = "Mirjana";
-	string searchPassword = "dane";
+	string searchUsername;
+	string searchPassword;
+	string location;
+	char position;
+	char text[255];
 
 	cout << "Hello user!" << endl;
 	cout << "Username: ";
 	cin >> searchUsername;
-	cout << endl << "Password: ";
+	cout << "Password: ";
 	cin >> searchPassword;
+	cout << "Location: ";
+	cin >> location;
+	// if some other character is entered write a error
+	cout << "Entering pass toll (E) or Leaving pass tool (L): ";
+	cin >> position;
 
 	User user(searchUsername, searchPassword);
-	string text;
-	int flag = 0;
-
-	ifstream enter("User.txt", std::ios::in);
-	if (enter)
+	if (user.checkAuthorisation())
 	{
-		while (getline(enter, text))
-		{ // I changed this, see below
-			if (text.find(searchUsername, 0) != string::npos && text.find(searchPassword, 0) != string::npos)
+		if (position == 'E')
+		{
+			cout << "For help on the road (H), Give ticket to user (G), Log out(0)";
+			cin >> position;
+			if (position == 'H')
 			{
-				cout << "found: " << searchUsername << " " << searchPassword << endl;
-				flag = 1;
+				ifstream help("Help.txt", ios::in);
+				if (help)
+					while (help)
+					{
+						help.getline(text, 255, '\n');
+						if (help) cout << text << endl;
+					}
+				else
+					cout << "Not such database!";
+				help.close();
+			}
+			else if(position == 'G')
+			{
+				ofstream dat("Ticket.txt", ios::out);
+				if (!dat)
+					cout << "Error!";
+				else
+				{
+					dat << "___________Ticket of HNCS service______________" << endl << endl;
+					dat << "Location: " << location << endl;
+					dat << "Worker: " << user.getUsername() << endl << endl;
+					time_t now = time(0);
+					dat << "_______________Have a nice trip________________" << endl;
+					
+					// convert now to string form
+					char* dt = ctime(&now);
+
+					dat << "Date/Time: " << dt << endl;
+
+				}
+					
+				dat.close();
+
 			}
 		}
-		if (flag == 0)
-			cout << "Wrong username/password" << endl;
 	}
-	else
-		cout << "There is not like that database!";
-	enter.close();
+
 	getchar();
 	getchar();
 }

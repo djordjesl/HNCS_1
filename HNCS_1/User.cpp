@@ -27,17 +27,19 @@ bool User::checkAuthorisation()
 		{
 			if (text.find(username, 0) != std::string::npos && text.find(password, 0) != std::string::npos)
 			{
+				enter.close();
 				return true;
 			}
 		}
 
 		std::cout << "Wrong username/password" << std::endl;
+		enter.close();
 		return false;
 	}
 	else
 	{
 		std::cout << "Database like that doesnt exist!";
+		enter.close();
 		return false;
 	}
-	enter.close();
 }
