@@ -122,7 +122,6 @@
   <ItemGroup>
     <ClInclude Include="EnteringPassToll.h" />
     <ClInclude Include="LeavingPassToll.h" />
-    <ClInclude Include="Source.h" />
     <ClInclude Include="User.h" />
   </ItemGroup>
   <ItemGroup>
