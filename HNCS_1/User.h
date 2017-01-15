@@ -5,11 +5,14 @@
 class User
 {
 public:
-	User(std::string, std::string);
+	User(std::string, std::string, std::string);
 	std::string getUsername();
 	std::string getPassword();
+	std::string getLocation();
 	bool checkAuthorisation();
 	~User();
 private:
-	std::string username, password;
+	std::string username, password, location;
 };
+
+____
