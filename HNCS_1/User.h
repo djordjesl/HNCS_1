@@ -14,5 +14,3 @@ public:
 private:
 	std::string username, password, location;
 };
-
-____
