@@ -18,6 +18,9 @@
     <ClInclude Include="User.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LeavingPassToll.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="EnteringPassToll.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -27,6 +30,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Source.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LeavingPassToll.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="EnteringPassToll.cpp">
