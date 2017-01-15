@@ -1,0 +1,5 @@
+Service				Numbers
+Centar za obavjestavanje	121
+Policija			122
+Vatrogasci			123
+Hitna pomoc			124
