@@ -1,8 +1,10 @@
-Sun Jan 15 10:36:45 2017
+Sun Jan 15 12:52:14 2017
 
 _________________Your bill_____________________ 
+
  Entering location:  banjaluka
  Exit location: gradiska
- You need to pay 1BMK
+ You need to pay 1 BMK
  You drove too fast, you need to pay 1 BMK 
+
  _______________Have a nice trip!________________

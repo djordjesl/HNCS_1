@@ -15,9 +15,9 @@ void LeavingPassToll::printTicket(User user)
 		dat << "_________________Your bill_____________________ " << endl << endl;
 		dat << " Entering location: " << getOldLocation() << endl;
 		dat << " Exit location: " << user.getLocation() << endl;
-		dat << " You need to pay " << billing() << " BMK" << endl;
+		dat << " You need to pay " << billing() << " BAM" << endl;
 		if (speedingTicket())
-			dat << " You drove too fast, you need to pay " << speedingTicket() << " BMK " << endl << endl;
+			dat << " You drove too fast, you need to pay " << speedingTicket() << " BAM " << endl << endl;
 		dat << " _______________Have a nice trip!________________" << endl;
 	}
 }
