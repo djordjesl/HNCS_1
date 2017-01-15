@@ -37,4 +37,3 @@ void EnteringPassToll::printHelp()
 		cout << "Not such database!";
 	help.close();
 }
-
