@@ -22,11 +22,10 @@ void LeavingPassToll::printTicket(User user)
 		dat << " _______________Have a nice trip!________________" << endl;
 	}
 }
-
 double LeavingPassToll::billing(User user)
 {
 	string temp;
-	double a=1,b=1;
+	double a = 1, b = 1;
 	int t;
 
 	ifstream dat("Cjenovnik.txt", ios::in);
@@ -43,11 +42,11 @@ double LeavingPassToll::billing(User user)
 			if (temp == getOldLocation())
 			{
 				t = getCategory();
-				while(t--)
-				getline(dat, temp, ' ');
+				while (t--)
+					getline(dat, temp, ' ');
 				a = atof(temp.c_str());
 			}
-			else if(temp==user.getLocation())
+			else if (temp == user.getLocation())
 			{
 				t = getCategory();
 				while (t--)
@@ -56,19 +55,17 @@ double LeavingPassToll::billing(User user)
 			}
 			getline(dat, temp, '\n');
 		}
-		
+
 		dat.close();
 	}
 	double c = b - a;
 	return c;
 }
-
 double LeavingPassToll::speedingTicket()
 {
 
 	return 1;
 }
-
 string LeavingPassToll::getOldLocation()
 {
 	string temp;
@@ -86,8 +83,6 @@ string LeavingPassToll::getOldLocation()
 	}
 	return 0;
 }
-
-
 int LeavingPassToll::getCategory()
 {
 	string temp;

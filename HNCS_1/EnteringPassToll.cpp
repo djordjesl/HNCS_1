@@ -20,6 +20,7 @@ void EnteringPassToll::printTicket(User user)
 
 	}
 
+
 	dat.close();
 }
 
@@ -37,9 +38,7 @@ void EnteringPassToll::printHelp()
 		cout << "Not such database!";
 	help.close();
 }
-
 void EnteringPassToll::setCategory(int x)
 {
 	category = x;
 }
-

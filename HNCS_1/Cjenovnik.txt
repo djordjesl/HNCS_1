@@ -1,0 +1,8 @@
+	Autoput Banja Luka-Gradiska cjenovnik
+		(cijena u BAM)
+---------------------------------------------------
+Lokacija 	I   II  III IV
+Trn:		0.5 0.5 0.8 1.0 
+Laktasi:	1.0 1.2 1.5 1.8 
+Nova Topola:	1.5 1.8 2.0 2.5 
+Gradiska:	2.0 2.4 2.8 3.5 
