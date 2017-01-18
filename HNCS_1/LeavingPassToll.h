@@ -11,7 +11,8 @@ class LeavingPassToll :public EnteringPassToll
 {
 public:
 	void printTicket(User);
-	double billing();
+	double billing(User);
 	double speedingTicket();
 	string getOldLocation();
+	int getCategory();
 };

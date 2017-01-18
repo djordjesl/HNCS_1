@@ -5,7 +5,6 @@
 #include "EnteringPassToll.h"
 #include "LeavingPassToll.h"
 using namespace std;
-
 int main()
 {
 	EnteringPassToll ept;
@@ -23,14 +22,11 @@ int main()
 	cin >> searchPassword;
 	cout << "Location: ";
 	cin >> location;
-
 	User user(searchUsername, searchPassword, location);
 	// if some other character is entered write a error
 
 	cout << "Entering pass toll (E) or Leaving pass tool (L): ";
 	cin >> position;
-
-
 	if (user.checkAuthorisation())//checks if there is a user with that name and password
 	{
 
@@ -46,7 +42,13 @@ int main()
 					ept.printHelp();
 
 				else if (position == 'G')
+				{
+					int x;
+					cout << "Vehicle category: ";
+					cin >> x;
+					ept.setCategory(x);
 					ept.printTicket(user);
+				}
 			}
 		}
 		else if (position == 'L')//leaving pass toll
@@ -64,7 +66,5 @@ int main()
 			}
 		}
 	}
-
-	getchar();
-	getchar();
+	system("pause");
 }

@@ -11,4 +11,7 @@ class EnteringPassToll
 public:
 	void printTicket(User);
 	void printHelp();
+	void setCategory(int);
+protected:
+	int category;
 };
