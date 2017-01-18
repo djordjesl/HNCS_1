@@ -13,9 +13,9 @@ void EnteringPassToll::printTicket(User user)
 
 		dat << dt << endl;
 		dat << "___________Ticket of HNCS service______________" << endl << endl;
-		dat << "Entering location: " << user.getLocation() << endl;
-		dat << "Worker: " << user.getUsername() << endl << endl;
-
+		dat << "Entering location:" << user.getLocation() << endl;
+		dat << "Vehicle category:" << category << endl;
+		dat << "Worker:" << user.getUsername() << endl << endl;
 		dat << "_______________Have a nice trip________________" << endl;
 
 	}
@@ -37,3 +37,9 @@ void EnteringPassToll::printHelp()
 		cout << "Not such database!";
 	help.close();
 }
+
+void EnteringPassToll::setCategory(int x)
+{
+	category = x;
+}
+

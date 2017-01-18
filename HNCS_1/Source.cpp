@@ -46,7 +46,13 @@ int main()
 					ept.printHelp();
 
 				else if (position == 'G')
+				{
+					int x;
+					cout << "Vehicle category: ";
+					cin >>x;
+					ept.setCategory(x);
 					ept.printTicket(user);
+				}
 			}
 		}
 		else if (position == 'L')//leaving pass toll

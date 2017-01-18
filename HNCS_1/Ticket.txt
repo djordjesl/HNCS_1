@@ -1,8 +1,9 @@
-Sun Jan 15 12:51:55 2017
+Wed Jan 18 18:12:57 2017
 
 ___________Ticket of HNCS service______________
 
-Entering location: banjaluka
-Worker: Mirjana
+Entering location:Trn
+Vehicle category:2
+Worker:Mirjana
 
 _______________Have a nice trip________________
