@@ -14,4 +14,5 @@ public:
 	void setCategory(int);
 protected:
 	int category;
+	time_t ID;
 };

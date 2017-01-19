@@ -63,8 +63,19 @@ double LeavingPassToll::billing(User user)
 }
 double LeavingPassToll::speedingTicket()
 {
-
-	return 1;
+	long int t1 = static_cast<long int>(time(NULL)),t2;
+	string temp;
+	ifstream dat("Ticket.txt", ios::in);
+	if (!dat)
+		cout << "Error!";
+	else {
+		getline(dat, temp, ':');
+		getline(dat, temp, '\n');
+		t2 = atol(temp.c_str());
+		if ((t2 - t1) < 300)
+			return 50.0;
+	}
+	return 0;
 }
 string LeavingPassToll::getOldLocation()
 {
