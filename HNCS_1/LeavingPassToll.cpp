@@ -63,7 +63,7 @@ double LeavingPassToll::billing(User user)
 }
 double LeavingPassToll::speedingTicket()
 {
-	long int t1 = static_cast<long int>(time(NULL)),t2;
+	long int t1 = static_cast<long int>(time(NULL)), t2;
 	string temp;
 	ifstream dat("Ticket.txt", ios::in);
 	if (!dat)
