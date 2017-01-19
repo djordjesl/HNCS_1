@@ -10,7 +10,9 @@ void EnteringPassToll::printTicket(User user)
 		time_t now = time(0);
 		// convert now to string form
 		char* dt = ctime(&now);
+		ID = now;
 
+		dat << "ID:" << ID << endl;
 		dat << dt << endl;
 		dat << "___________Ticket of HNCS service______________" << endl << endl;
 		dat << "Entering location:" << user.getLocation() << endl;
