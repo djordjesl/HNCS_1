@@ -41,3 +41,58 @@ Worker:Mirjana
 
 _______________Have a nice trip________________
 
+ID:1484862598
+Thu Jan 19 22:49:58 2017
+
+___________Ticket of HNCS service______________
+
+Entering location:Laktasi
+Vehicle category:2
+Worker:Mirjana
+
+_______________Have a nice trip________________
+
+ID:1484863648
+Thu Jan 19 23:07:28 2017
+
+___________Ticket of HNCS service______________
+
+Entering location:Trn
+Vehicle category:2
+Worker:Mirjana
+
+_______________Have a nice trip________________
+
+ID:1484864187
+Thu Jan 19 23:16:27 2017
+
+___________Ticket of HNCS service______________
+
+Entering location:Laktasi
+Vehicle category:1
+Worker:Mirjana
+
+_______________Have a nice trip________________
+
+ID:1484865678
+Thu Jan 19 23:41:18 2017
+
+___________Ticket of HNCS service______________
+
+Entering location:Trn
+Vehicle category:2
+Worker:Mirjana
+
+_______________Have a nice trip________________
+
+ID:1484866259
+Thu Jan 19 23:50:59 2017
+
+___________Ticket of HNCS service______________
+
+Entering location:Trn
+Vehicle category:2
+Worker:Mirjana
+
+_______________Have a nice trip________________
+

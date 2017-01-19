@@ -2,24 +2,40 @@
 
 void LeavingPassToll::printTicket(User user)
 {
-	ofstream dat("TicketExit.txt", ios::out);
+	string temp;
+	int k = 1;
+	ifstream dat("Ticket.txt", ios::in);
 	if (!dat)
 		cout << "Error!";
-	else
-	{
-		time_t now = time(0);
-		// convert now to string form
-		char* dt = ctime(&now);
+	else {
+		while (getline(dat, temp))
+			if (temp.find(IDnew, 0) != string::npos)
+				k = 0;
+		dat.close();
+		if (k)
+			cout << "No such ID" << endl;
+		else {
+			ofstream dat("TicketExit.txt", ios::out);
+			if (!dat)
+				cout << "Error!";
+			else
+			{
+				time_t now = time(0);
+				// convert now to string form
+				char* dt = ctime(&now);
 
-		dat << dt << endl;
-		dat << "_________________Your bill_____________________ " << endl << endl;
-		dat << " Vehicle category: " << getCategory() << endl;
-		dat << " Worker: " << user.getUsername() << endl;
-		dat << " Relation: " << getOldLocation() << " - " << user.getLocation() << endl;
-		dat << " You need to pay " << billing(user) << " BAM" << endl;
-		if (speedingTicket())
-			dat << " You drove too fast, you need to pay " << speedingTicket() << " BAM " << endl << endl;
-		dat << " _______________Have a nice trip!________________" << endl;
+				dat << dt << endl;
+				dat << "_________________Your bill_____________________ " << endl << endl;
+				dat << " Vehicle category: " << getCategory() << endl;
+				dat << " Worker: " << user.getUsername() << endl;
+				dat << " Relation: " << getOldLocation() << " - " << user.getLocation() << endl;
+				dat << " You need to pay " << billing(user) << " BAM" << endl;
+				if (speedingTicket())
+					dat << " You drove too fast, you need to pay " << speedingTicket() << " BAM " << endl << endl;
+				dat << " _______________Have a nice trip!________________" << endl;
+				dat.close();
+			}
+		}
 	}
 }
 double LeavingPassToll::billing(User user)
@@ -69,12 +85,13 @@ double LeavingPassToll::speedingTicket()
 	if (!dat)
 		cout << "Error!";
 	else {
-		while (temp.find(IDnew, 0) == string::npos)
+		while (temp.find(IDnew, 0) != string::npos)
 			getline(dat, temp);
 		getline(dat, temp, ':');
 		getline(dat, temp, '\n');
 		t2 = atol(temp.c_str());
-		if ((t1-t2) < 300)
+		dat.close();
+		if ((t1-t2) < 30000)
 			return 50.0;
 	}
 	return 0;
@@ -94,6 +111,7 @@ string LeavingPassToll::getOldLocation()
 		getline(dat, temp);
 		getline(dat, temp, ':');
 		getline(dat, temp, '\n');
+		dat.close();
 		return temp;
 	}
 	return 0;
@@ -115,9 +133,26 @@ int LeavingPassToll::getCategory()
 		getline(dat, temp, ':');
 		getline(dat, temp, '\n');
 		double cat = atof(temp.c_str());
+		dat.close();
 		return cat;
 	}
+	dat.close();
 	return 0;
+}
+
+void LeavingPassToll::printHelp()
+{
+	char text[255];
+	ifstream help("Help.txt", ios::in);
+	if (help)
+		while (help)
+		{
+			help.getline(text, 255, '\n');
+			if (help) cout << text << endl;
+		}
+	else
+		cout << "No such database!";
+	help.close();
 }
 
 void LeavingPassToll::setID(string ID)

@@ -14,7 +14,7 @@ int main()
 	string searchPassword;
 	string location;
 	string ID;
-	char position;
+	char position1=1,position2=1;
 
 	cout << "Hello user!" << endl;
 	cout << "Username: ";
@@ -25,52 +25,63 @@ int main()
 	cin >> location;
 	User user(searchUsername, searchPassword, location);
 	// if some other character is entered write a error
-
+	do{
 	cout << "Entering pass toll (E) or Leaving pass tool (L): ";
-	cin >> position;
+	cin >> position1;
 	if (user.checkAuthorisation())//checks if there is a user with that name and password
 	{
 
-		if (position == 'E')//entering pass toll
+		if (position1 == 'E')//entering pass toll
 		{
 
-			while (position != '0')
+			while (position2 != '0')
 			{
-				cout << "For help on the road (H), Give ticket to user (G), Log out(0)";
-				cin >> position;
+				do {
+					cout << "For help on the road (H), Give ticket to user (G), Log out(0)";
+					cin >> position2;
 
-				if (position == 'H')
-					ept.printHelp();
+					if (position2 == 'H')
+						ept.printHelp();
 
-				else if (position == 'G')
-				{
-					int x;
-					cout << "Vehicle category: ";
-					cin >> x;
-					ept.setCategory(x);
-					ept.printTicket(user);
-				}
+					else if (position2 == 'G')
+					{
+						int x;
+						do {
+							cout << "Vehicle category I(1) II(2) III(3) IV(4): ";
+							cin >> x;
+						} while (x < 1 || x>4);
+
+						ept.setCategory(x);
+						ept.printTicket(user);
+					}
+				} while (position2 != 'G' && position2 != 'H' && position2 != '0');
 			}
 		}
-		else if (position == 'L')//leaving pass toll
+		else if (position1 == 'L')//leaving pass toll
 		{
-			while (position != '0')
+			while (position2 != '0')
 			{
-				cout << "For help on the road (H), Give bill to user (B), Log out(0)";
-				cin >> position;
+				do {
+					cout << "For help on the road (H), Give bill to user (B), Log out(0)";
+					cin >> position2;
 
-				if (position == 'H')
-					lpt.printHelp();
+					if (position2 == 'H')
+						lpt.printHelp();
 
-				else if (position == 'B')
-				{
-					cout << "Enter ID: ";
-					cin >> ID;
-					lpt.setID(ID);
-					lpt.printTicket(user);
-				}
+					else if (position2 == 'B')
+					{
+						cout << "Enter ID: ";
+						cin >> ID;
+						lpt.setID(ID);
+						lpt.printTicket(user);
+					}
+				} while (position2 != 'B' && position2 != 'H' && position2 != '0');
 			}
 		}
 	}
-	system("pause");
+		
+	} while (position1 != 'E' && position1 != 'L' && position1!='0');
+	
+	getchar();
+	getchar();
 }

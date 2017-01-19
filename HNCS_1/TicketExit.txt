@@ -1,9 +1,11 @@
-Thu Jan 19 19:58:23 2017
+Thu Jan 19 23:22:54 2017
 
 _________________Your bill_____________________ 
 
  Vehicle category: 1
  Worker: Mirjana
- Relation: Trn - Gradiska
- You need to pay 1.5 BAM
+ Relation: Laktasi - Gradiska
+ You need to pay 1 BAM
+ You drove too fast, you need to pay 28117 BAM 
+
  _______________Have a nice trip!________________

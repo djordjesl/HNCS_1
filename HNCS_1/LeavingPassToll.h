@@ -4,10 +4,9 @@
 #include <fstream>
 #include <ctime>
 #include "User.h"
-#include "EnteringPassToll.h"
 using namespace std;
 
-class LeavingPassToll :public EnteringPassToll
+class LeavingPassToll 
 {
 public:
 	void printTicket(User);
@@ -15,6 +14,7 @@ public:
 	double speedingTicket();
 	string getOldLocation();
 	int getCategory();
+	void printHelp();
 	void setID(string);
 private:
 	string IDnew;
