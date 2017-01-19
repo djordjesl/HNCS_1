@@ -2,7 +2,7 @@
 
 void EnteringPassToll::printTicket(User user)
 {
-	ofstream dat("Ticket.txt", ios::out);
+	ofstream dat("Ticket.txt", ios::app);
 	if (!dat)
 		cout << "Error!";
 	else
@@ -18,7 +18,7 @@ void EnteringPassToll::printTicket(User user)
 		dat << "Entering location:" << user.getLocation() << endl;
 		dat << "Vehicle category:" << category << endl;
 		dat << "Worker:" << user.getUsername() << endl << endl;
-		dat << "_______________Have a nice trip________________" << endl;
+		dat << "_______________Have a nice trip________________" << endl<<endl;
 
 	}
 

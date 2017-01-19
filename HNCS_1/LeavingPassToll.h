@@ -15,4 +15,7 @@ public:
 	double speedingTicket();
 	string getOldLocation();
 	int getCategory();
+	void setID(string);
+private:
+	string IDnew;
 };

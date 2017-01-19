@@ -1,11 +1,9 @@
-Thu Jan 19 15:34:53 2017
+Thu Jan 19 19:58:23 2017
 
 _________________Your bill_____________________ 
 
- Vehicle category: 0
+ Vehicle category: 1
  Worker: Mirjana
  Relation: Trn - Gradiska
- You need to pay 0 BAM
- You drove too fast, you need to pay 50 BAM 
-
+ You need to pay 1.5 BAM
  _______________Have a nice trip!________________

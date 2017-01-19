@@ -13,6 +13,7 @@ int main()
 	string searchUsername;
 	string searchPassword;
 	string location;
+	string ID;
 	char position;
 
 	cout << "Hello user!" << endl;
@@ -62,7 +63,12 @@ int main()
 					lpt.printHelp();
 
 				else if (position == 'B')
+				{
+					cout << "Enter ID: ";
+					cin >> ID;
+					lpt.setID(ID);
 					lpt.printTicket(user);
+				}
 			}
 		}
 	}

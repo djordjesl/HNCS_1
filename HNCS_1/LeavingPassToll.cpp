@@ -69,10 +69,12 @@ double LeavingPassToll::speedingTicket()
 	if (!dat)
 		cout << "Error!";
 	else {
+		while (temp.find(IDnew, 0) == string::npos)
+			getline(dat, temp);
 		getline(dat, temp, ':');
 		getline(dat, temp, '\n');
 		t2 = atol(temp.c_str());
-		if ((t2 - t1) < 300)
+		if ((t1-t2) < 300)
 			return 50.0;
 	}
 	return 0;
@@ -84,10 +86,12 @@ string LeavingPassToll::getOldLocation()
 	if (!dat)
 		cout << "Error!";
 	else {
-		getline(dat, temp, '\n');
-		getline(dat, temp, '\n');
-		getline(dat, temp, '\n');
-		getline(dat, temp, '\n');
+		while (temp.find(IDnew, 0) == string::npos)
+			getline(dat, temp);
+		getline(dat, temp);
+		getline(dat, temp);
+		getline(dat, temp);
+		getline(dat, temp);
 		getline(dat, temp, ':');
 		getline(dat, temp, '\n');
 		return temp;
@@ -101,15 +105,22 @@ int LeavingPassToll::getCategory()
 	if (!dat)
 		cout << "Error!";
 	else {
-		getline(dat, temp, '\n');
-		getline(dat, temp, '\n');
-		getline(dat, temp, '\n');
-		getline(dat, temp, '\n');
-		getline(dat, temp, '\n');
+		while (temp.find(IDnew, 0) == string::npos)
+			getline(dat, temp);
+		getline(dat, temp);
+		getline(dat, temp);
+		getline(dat, temp);
+		getline(dat, temp);
+		getline(dat, temp);
 		getline(dat, temp, ':');
 		getline(dat, temp, '\n');
 		double cat = atof(temp.c_str());
 		return cat;
 	}
 	return 0;
+}
+
+void LeavingPassToll::setID(string ID)
+{
+	IDnew = ID;
 }
