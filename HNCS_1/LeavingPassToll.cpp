@@ -75,6 +75,8 @@ double LeavingPassToll::billing(User user)
 		dat.close();
 	}
 	double c = b - a;//price difference is how much you pay
+	if (c < 0)
+		return -c;
 	return c;
 }
 double LeavingPassToll::speedingTicket()
