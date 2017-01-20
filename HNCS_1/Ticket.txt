@@ -8,6 +8,7 @@ Vehicle category:2
 Worker:Mirjana
 
 _______________Have a nice trip________________
+
 ID:1484846166
 Thu Jan 19 18:16:06 2017
 
@@ -92,6 +93,50 @@ ___________Ticket of HNCS service______________
 
 Entering location:Trn
 Vehicle category:2
+Worker:Mirjana
+
+_______________Have a nice trip________________
+
+ID:1484925495
+Fri Jan 20 16:18:15 2017
+
+___________Ticket of HNCS service______________
+
+Entering location:Trn
+Vehicle category:2
+Worker:Mirjana
+
+_______________Have a nice trip________________
+
+ID:1484937983
+Fri Jan 20 19:46:23 2017
+
+___________Ticket of HNCS service______________
+
+Entering location:Banjaluka
+Vehicle category:2
+Worker:Mirjana
+
+_______________Have a nice trip________________
+
+ID:1484938200
+Fri Jan 20 19:50:00 2017
+
+___________Ticket of HNCS service______________
+
+Entering location:Banjaluka
+Vehicle category:1
+Worker:Mirjana
+
+_______________Have a nice trip________________
+
+ID:1484943228
+Fri Jan 20 21:13:48 2017
+
+___________Ticket of HNCS service______________
+
+Entering location:Banjaluka
+Vehicle category:1
 Worker:Mirjana
 
 _______________Have a nice trip________________

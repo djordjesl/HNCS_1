@@ -1,11 +1,11 @@
-Thu Jan 19 23:22:54 2017
+Fri Jan 20 21:14:49 2017
 
 _________________Your bill_____________________ 
 
  Vehicle category: 1
- Worker: Mirjana
- Relation: Laktasi - Gradiska
+ Worker: Djordje
+ Relation: Banjaluka - Topola
  You need to pay 1 BAM
- You drove too fast, you need to pay 28117 BAM 
+ You drove too fast, you need to pay 50 BAM 
 
  _______________Have a nice trip!________________

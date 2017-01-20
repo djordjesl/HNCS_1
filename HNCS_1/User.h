@@ -10,6 +10,7 @@ public:
 	std::string getPassword();
 	std::string getLocation();
 	bool checkAuthorisation();
+	bool checkLocation();
 	~User();
 private:
 	std::string username, password, location;

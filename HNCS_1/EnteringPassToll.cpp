@@ -11,7 +11,7 @@ void EnteringPassToll::printTicket(User user)
 		// convert now to string form
 		char* dt = ctime(&now);
 		ID = now;
-
+		//printing ticket in file
 		dat << "ID:" << ID << endl;
 		dat << dt << endl;
 		dat << "___________Ticket of HNCS service______________" << endl << endl;
@@ -31,7 +31,7 @@ void EnteringPassToll::printHelp()
 	char text[255];
 	ifstream help("Help.txt", ios::in);
 	if (help)
-		while (help)
+		while (help)//printing out file content
 		{
 			help.getline(text, 255, '\n');
 			if (help) cout << text << endl;
